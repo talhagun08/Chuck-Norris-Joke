@@ -12,6 +12,8 @@ const generateJoke = () =>{
         if(this.readyState===4 & this.status ===200){
         const data = JSON.parse(this.responseText);
         jokeEl.innerHTML = data.value;
+        }else{
+            jokeEl.innerHTML = "Chuck can't find his joke notes."
         }
     };
 
